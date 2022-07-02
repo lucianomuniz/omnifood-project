@@ -4,7 +4,6 @@ Instead, 1 rem = 1 em = 16px */
 /***********************************/
 /* BELOW 1344px (Smaller desktops) */
 /***********************************/
-
 @media (max-width: 84em) {
   .hero {
     max-width: 120rem;
@@ -22,7 +21,6 @@ Instead, 1 rem = 1 em = 16px */
 /************************************/
 /* BELOW 1200px (Landscape Tablets) */
 /************************************/
-
 @media (max-width: 74em) {
   html {
     /* 9px / 16px = 56.25% */
@@ -67,7 +65,6 @@ Instead, 1 rem = 1 em = 16px */
 /*************************/
 /* BELOW 944px (Tablets) */
 /*************************/
-
 @media (max-width: 59em) {
   html {
     /* 8px / 16px = 50% */
@@ -138,7 +135,9 @@ Instead, 1 rem = 1 em = 16px */
   }
 
   .main-nav {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     position: absolute;
     top: 0;
     left: 0;
@@ -194,7 +193,6 @@ Instead, 1 rem = 1 em = 16px */
 /*************************/
 /* BELOW 704px (Smaller Tablets) */
 /*************************/
-
 @media (max-width: 44em) {
   .grid--3-cols,
   .grid--4-cols {
@@ -230,10 +228,9 @@ Instead, 1 rem = 1 em = 16px */
   }
 }
 
-/*************************/
+/******************************/
 /* BELOW 544px (Smart phones) */
-/*************************/
-
+/******************************/
 @media (max-width: 34em) {
   .grid {
     row-gap: 4.8rem;
@@ -299,5 +296,47 @@ Instead, 1 rem = 1 em = 16px */
   .cta-img-box {
     height: 32rem;
     grid-row: 1;
+  }
+}
+
+/*****************************/
+/* Fixing Safari flexbox gap */
+/*****************************/
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+  margin-right: 4.8rem;
+}
+.no-flexbox-gap .list-item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+.no-flexbox-gap .list-icon:not(:last-child) {
+  margin-right: 1.6rem;
+}
+.no-flexbox-gap .delivered-faces {
+  margin-right: 1.6rem;
+}
+.no-flexbox-gap .meal-attribute:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.no-flexbox-gap .meal-icon {
+  margin-right: 1.6rem;
+}
+.no-flexbox-gap .footer-row div:not(:last-child) {
+  margin-right: 6.4rem;
+}
+.no-flexbox-gap .social-links li:not(:last-child) {
+  margin-right: 2.4rem;
+}
+.no-flexbox-gap .footer-nav li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+@media (max-width: 74em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+}
+@media (max-width: 59em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
   }
 }
