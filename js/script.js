@@ -51,7 +51,8 @@ const obs = new IntersectionObserver(
   (entries) => {
     const ent = entries[0];
     if (!ent.isIntersecting) document.body.classList.add('sticky');
-    else document.body.classList.remove('sticky');
+
+    if (ent.isIntersecting) document.body.classList.remove('sticky');
   },
   {
     // IN the viewport
